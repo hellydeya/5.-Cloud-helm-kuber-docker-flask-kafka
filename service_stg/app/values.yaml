@@ -1,0 +1,44 @@
+
+replicaCount: 3
+
+image:
+
+  repository:  --- hello ---
+  pullPolicy: IfNotPresent
+
+  tag: v2023-02-25-r1
+
+containerPort: 5000
+
+config:
+  KAFKA_HOST:  --- hello ---
+  KAFKA_PORT: " --- hello ---"
+  KAFKA_CONSUMER_USERNAME:  --- hello ---
+  KAFKA_CONSUMER_PASSWORD:  --- hello ---
+  KAFKA_CONSUMER_GROUP:  --- hello ---
+  KAFKA_SOURCE_TOPIC:  --- hello ---
+  KAFKA_STG_SERVICE_ORDERS_TOPIC:  --- hello ---
+
+  PG_WAREHOUSE_HOST:  --- hello ---
+  PG_WAREHOUSE_PORT: " --- hello ---"
+  PG_WAREHOUSE_DBNAME:  --- hello ---
+  PG_WAREHOUSE_USER:  --- hello ---
+  PG_WAREHOUSE_PASSWORD:  --- hello ---
+  
+  REDIS_HOST:  --- hello ---v
+  REDIS_PORT: " --- hello ---v"
+  REDIS_PASSWORD:  --- hello ---
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
